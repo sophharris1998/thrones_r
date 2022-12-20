@@ -1,7 +1,8 @@
-import "./App.scss";
+import "./App.css";
 import { useState, useEffect } from "react";
 import CharacterCard from "./components/CharacterCard/CharacterCard";
 import CharacterContainer from "./containers/CharacterContainer/CharacterContainer";
+import Nav from "./containers/Nav/Nav";
 
 const App = () => {
   const [charArray, setCharArray] = useState([]);
@@ -20,7 +21,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <button onClick={getCharacters}> Click me! </button>
+      <Nav />
       <CharacterContainer charArray={charArray} />
     </div>
   );
